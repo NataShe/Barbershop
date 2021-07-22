@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Барбершоп "Бородинский"</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30"
+          alt="Барбершоп Бородинский">
+      </picture>
+    </a>
+
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="works-item.html">Ваши работы</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">Записаться</a>
+          </li>
+        </ul>
+
+        <ul class="main-nav__user-list">
+          <li class="main-nav__user-item">
+            <a class="main-nav__user-login" href="#" title="Войти">
+              Войти
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Барбершоп Бородинский - истинно мужская классика</h1>
+
+    <!--statistics-->
+    <section class="stats">
+      <header class="stats__header">
+        <h2 class="visually-hidden">Статистика Барбершопа</h2>
+        <b class="stats__slogan">Стрижка у нас <br> это выгодно!</b>
+        <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+        <small class="stats__legend stats__legend--top">
+          <sup>*</sup> - приведённые данные - ложь
+        </small>
+      </header>
+      <!--table stats-->
+      <table class="stats__list">
+        <tr>
+          <td class="stats__value">
+            1 500<sup>*</sup>
+          </td>
+          <td class="stats__field">рублей <br>вложений</td>
+        </tr>
+        <tr>
+          <td class="stats__value">
+            7 500<sup>*</sup>
+          </td>
+          <td class="stats__field">секунд <br>времени мастера</td>
+        </tr>
+        <tr>
+          <td class="stats__value">
+            90 000<sup>*</sup>
+          </td>
+          <td class="stats__field">постриженных <br>волос</td>
+        </tr>
+        <tr>
+          <td class="stats__value">
+            500 000<sup>*</sup>
+          </td>
+          <td class="stats__field">лайков и <br>комплиментов</td>
+        </tr>
+      </table>
+      <small class="stats__legend stats__legend--bottom">
+        <sup>*</sup> - приведённые данные - ложь
+      </small>
+    </section>
+    <!--advantages-->
+    <section class="advantages">
+      <div class="advantages__wrapper slider">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <input class="slider__input" type="radio" name="advantages" id="advantages-input-1" checked>
+        <input class="slider__input" type="radio" name="advantages" id="advantages-input-2">
+        <input class="slider__input" type="radio" name="advantages" id="advantages-input-3">
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--fast slider__item">
+            <h3 class="advantages__item__title">Быстро</h3>
+            <p class="advantages__text">Мы делаем свою работу быстро! Два часа пролетят незаметно, и вы - счастливый
+              обладатель стильной стрижки</p>
+          </li>
+          <li class="advantages__item advantages__item--cool slider__item">
+            <h3 class="advantages__item__title">Круто</h3>
+            <p class="advantages__text">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во
+              всяком случае внешне.</p>
+          </li>
+          <li class="advantages__item advantages__item--price slider__item">
+            <h3 class="advantages__item__title">Дорого</h3>
+            <p class="advantages__text">Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же,
+              разве цена не дает определенный статус?</p>
+          </li>
+        </ul>
+        <div class="advantages__toggles slider__toggles">
+          <label class="slider__toggle" for="advantages-input-1">1</label>
+          <label class="slider__toggle" for="advantages-input-2">2</label>
+          <label class="slider__toggle" for="advantages-input-3">3</label>
+        </div>
+      </div>
+    </section>
+    <!--news-->
+    <section class="news">
+      <div class="news__wrapper">
+        <h2 class="news__title">Новости и акции</h2>
+        <ul class="news__list">
+          <li class="news__item">
+            <time class="news__date" datetime="2017-09-29">
+              <b class="news__day">29</b>сент
+            </time>
+            <p class="news__text">Нам наконец-то завезли Егермейстер! Теперь вы можете пропустить стаканчик во время
+              стрижки.
+            </p>
+          </li>
+          <li class="news__item">
+            <time class="news__date" datetime="2017-09-19">
+              <b class="news__day">19</b>сент
+            </time>
+            <p class="news__text">В нашей команде пополнение, Борис "Бритва" Стригунец, обладатель множества титулов и
+              наград пополнил наши стройные ряды.Cпешите записаться!
+            </p>
+          </li>
+          <li class="news__item">
+            <time class="news__date" datetime="2017-09-09">
+              <b class="news__day">9</b>сент
+            </time>
+            <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем
+              здесь подвох!
+            </p>
+          </li>
+        </ul>
+        <a href="#" class="news__to-all button">Показать все</a>
+      </div>
+    </section>
+    <!--reviews-->
+    <section class="reviews">
+      <div class="reviews__wrapper slider">
+        <h2 class="reviews__title">Отзывы о нас</h2>
+        <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
+        <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
+        <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
+        <div class="reviews__list slider__list">
+          <blockquote class="reviews__item slider__item">
+            <div class="reviews__author-picture">
+              <img class="reviews__author-image" src="img/picture-travis.jpg" alt="фото Трэвиса Баркера">
+            </div>
+            <cite class="reviews__author-name">Трэвис Баркер</cite>
+            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно
+              новую татуировку!</p>
+          </blockquote>
+          <blockquote class="reviews__item slider__item">
+            <div class="reviews__author-picture">
+              <img class="reviews__author-image" src="img/picture-ivan.jpg" alt="фото Ивана Бородайло">
+            </div>
+            <cite class="reviews__author-name">Иван Бородайло</cite>
+            <p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
+          </blockquote>
+          <blockquote class="reviews__item slider__item">
+            <div class="reviews__author-picture">
+              <img class="reviews__author-image" src="img/picture-john.jpg" alt="фото Джона Смита">
+            </div>
+            <cite class="reviews__author-name">Джон Смит</cite>
+            <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+          </blockquote>
+          <button class="reviews__prev" onclick = "minusSlide()" type="button">Предыдущий отзыв</button>
+          <button class="reviews__next" onclick = "plusSlide()" type="button">Следующий отзыв</button>
+        </div>
+        <div class="reviews__toggles slider__toggles">
+          <label class="reviews__toggle slider__toggle slider__toggle--active" for="reviews-input-1" onclick = "currentSlide(1)">1</label>
+          <label class="reviews__toggle slider__toggle" for="reviews-input-2" onclick = "currentSlide(2)">2</label>
+          <label class="reviews__toggle slider__toggle" for="reviews-input-3" onclick = "currentSlide(3)">3</label>
+        </div>
+        <a href="#" class="reviews__write button">Оставить свой</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__contacts">
+        <b class="contacts__title">Барбершоп "Бородинский"</b>
+        <p class="contacts__text">
+          г. Санкт-Петербург, ул. Большая Конюшенная 19 <br>
+          <a href="tel:+78125556666" class="contacts__phone">
+            <span class="contacts__phone-mobile">Тел: </span> +7 (812)
+            555-66-66
+          </a>
+        </p>
+      </div>
+      <div class="page-footer__social">
+        <b class="social__title">Давайте дружить!</b>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="">Мы в
+              Вконтакте
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="">Мы в
+              Фейсбуке
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="">Мы в
+              Инстаграме
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a href="" class="copyright__link button">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+
+  <section class="modal-login">
+    <h2 class="modal-login__title">Личный кабинет</h2>
+    <p>Введите свой логин и пароль, чтобы войти</p>
+    <form class="modal-login__form" action="#" method="POST">
+      <label for="login">
+        <input type="text" id="login" name="login" placeholder="Логин">
+      </label>
+      <label for="password">
+        <input type="text" id="password" name="password" placeholder="Пароль">
+      </label>
+      <input type="checkbox" name="remember" id="remember">
+      <label for="remember">Запомнить меня</label>
+      <a href="#">Я забыл пароль!</a>
+      <button class="modal-login__enter" type="submit">Войти <span>в личный кабинет</span></button>
+      <button class="modal-login__close button" type="button">Закрыть</button>
+    </form>
+  </section>
+<!---
+  <script>
+    const navMain = document.querySelector('.main-nav');
+    const navToggle = document.querySelector('.main-nav__toggle');
+    const link = document.querySelector('.main-nav__user-login');
+    const popup = document.querySelector('.modal-login');
+    const close = popup.querySelector('.modal-login__close');
+    const form = popup.querySelector('form');
+    const login = popup.querySelector("[name=login]");
+    const password = popup.querySelector("[name=password]");
+
+    let isStorageSupport = true;
+    let storage = '';
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+
+    try {
+      storage = localStorage.getItem('login');
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        popup.classList.add('modal-login--show');
+
+      if (storage) {
+        login.value = storage;
+        password.focus();
+      } else {
+        login.focus();
+      }
+    });
+
+    close.addEventListener('click', event => {
+      event.preventDefault();
+      popup.classList.remove('modal-login--show');
+      popup.classList.remove('modal-login--error');
+    });
+
+    form.addEventListener('submit', event => {
+      if (!login.value || !password.value) {
+        event.preventDefault();
+        popup.classList.remove('modal-login--error');
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add('modal-login--error');
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem('login', login.value);
+          }
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        if (popup.classList.contains('modal-login--show')) {
+          event.preventDefault();
+          popup.classList.remove('modal-login--show');
+          popup.classList.remove('modal-login--error');
+        }
+      }
+    });
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlide() {
+      showSlides(slideIndex += 1);
+    }
+
+    function minusSlide() {
+      showSlides(slideIndex -= 1);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      const slides = document.querySelectorAll('.reviews__item');
+      const sliderToggles = document.querySelectorAll('.slider__toggle')
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (let item of slides) {
+        item.style.display = 'none';
+      }
+      for (let toggle of sliderToggles) {
+        toggle.classList.remove('slider__toggle--active');
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      sliderToggles[slideIndex + 2].classList.add('slider__toggle--active');
+    }
+  </script>
+-->
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+.modal-login {
+  position: absolute;
+  top: 135px;
+  z-index: 100;
+  display: none;
+  background-color: $bg-lightgrey;
+  padding: 30px 20px 40px;
+}
+
+.modal-login__title {
+  margin: 0;
+  margin-bottom: 15px;
+  color: #000000;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal-login p {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #000000;
+}
+
+.modal-login__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-login__form label[for="login"],
+.modal-login__form label[for="password"] {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.modal-login__form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 45px 10px 17px;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  border: 1px solid #e5ddd5;
+  &:hover,
+  &:focus {
+    border-color: #d5c9bd;
+  }
+}
+
+.modal-login__form input {
+  &[id="login"] {
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
+  }
+  &[id="password"] {
+    margin-bottom: 22px;
+
+    background-image: url("../img/locked.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
+  }
+}
+
+.modal-login__form label[for="remember"] {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 60%;
+  padding-left: 48px;
+  line-height: 30px;
+  color: #000000;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #e5ddd5;
+  }
+
+  &:hover::before {
+    border-color: #d5c9bd;
+  }
+  &:active::before {
+    background-color: #d5c9bd;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+  }
+}
+
+#remember:checked ~ label[for="remember"]::before {
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+}
+
+#remember:checked ~ label[for="remember"]:active::before {
+  background-image: none;
+}
+
+.modal-login__form input[type="checkbox"] {
+  display: none;
+}
+
+.modal-login__form a {
+  display: block;
+  width: 40%;
+  margin-top: 2px;
+  text-align: right;
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    color: #826550;
+  }
+}
+
+.modal-login__enter {
+  display: block;
+  flex-grow: 1;
+  box-sizing: border-box;
+  width: 130px;
+  margin-top: 30px;
+  margin-right: 20px;
+  padding: 10px 40px 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #826550;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #6a4d38;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.modal-login__enter span {
+  display: none;
+}
+
+.modal-login__close {
+  flex-grow: 1;
+  box-sizing: border-box;
+  width: 130px;
+  margin-top: 30px;
+  padding: 10px 30px 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-login--show {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-login {
+    position: fixed;
+    top: 130px;
+    left: 50%;
+    box-sizing: border-box;
+    width: 460px;
+    padding: 50px 70px 55px;
+    transform: translateX(-50%);
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translate(-50%, -2000px);
+    }
+    70% {
+      transform: translate(-50%, 30px);
+    }
+    90% {
+      transform: translate(-50%, -10px);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .modal-login--show {
+    display: block;
+    animation: bounce 0.6s;
+  }
+
+  .modal-login__form input[type="text"] {
+    padding-left: 25px;
+  }
+
+  .modal-login__enter {
+    width: 320px;
+    margin-right: 0;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .modal-login__enter span {
+    display: inline;
+  }
+
+  .modal-login__close {
+    position: absolute;
+    top: 73px;
+    right: -90px;
+    z-index: 105;
+    width: 26px;
+    height: 26px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: #826550;
+    }
+    &:active::before,
+    &:active::after {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(-50%);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-40%);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(-60%);
+    }
+  }
+  .modal-login--error {
+    animation: shake 0.6s;
+  }
+}

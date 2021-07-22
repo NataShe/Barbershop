@@ -1,0 +1,56 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 85px;
+  text-align: center;
+}
+
+.page-header__logo img {
+  width: 226px;
+  height: 85px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    background-color: #000000;
+  }
+
+  .page-header__logo {
+    order: 2;
+    width: 100%;
+    height: 400px;
+    background-color: #000000;
+    background-image: url("../img/bg-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center -9px;
+    background-size: 1338px auto; //обязательно прописать ширину фона
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header@2x.jpg");
+    }
+  }
+
+  .page-header__logo img {
+    display: block;
+    width: 370px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 550px;
+
+    background-position: center 0;
+    background-size: cover; //чтобы фон заполнялся и не нарушались пропорции
+  }
+
+  .page-header__logo img {
+    margin-top: 57px;
+  }
+}
